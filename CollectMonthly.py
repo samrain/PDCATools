@@ -9,7 +9,6 @@
 """
 import xlrd
 import sqlite3
-import time
 import datetime
 from datetime import date
 from datetime import timedelta
@@ -27,13 +26,15 @@ dir_name = "/home/rain/下载/trac"
 file_list = [f_name for f_name in os.listdir(dir_name) if f_name.endswith('xls')]
 for f_in_name in file_list:
     if f_in_name.count('-1'):
-        startdate = datetime.date(2012,7,2)
+        startdate = datetime.date(2012,7,30)
     elif f_in_name.count('-2'):
-        startdate = datetime.date(2012,7,9)
+        startdate = datetime.date(2012,8,6)
     elif f_in_name.count('-3'):
-        startdate = datetime.date(2012,7,16)
+        startdate = datetime.date(2012,8,13)
     elif f_in_name.count('-4'):
-        startdate = datetime.date(2012,7,23)
+        startdate = datetime.date(2012,8,20)
+    else:
+        startdate = datetime.date(2012,8,27)
     print f_in_name,startdate
     xlsfile = xlrd.open_workbook(os.path.join(dir_name,f_in_name))
     """

@@ -23,6 +23,7 @@ def readxlsfile():
     tmptask = []
     file_list = [f_name for f_name in os.listdir(dir_name) if f_name.endswith('xls')]
     for f_in_name in file_list:
+        print f_in_name
         actor = (f_in_name.rsplit('(')[2]).split(')')[0]
         xlsfile = xlrd.open_workbook(os.path.join(dir_name,f_in_name))
         """

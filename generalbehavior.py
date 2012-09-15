@@ -13,7 +13,7 @@ import urllib
 import sqlite3
 
 
-u = urllib.urlopen('http://kb.miao-shi.net/display/ITKB/2012/07')
+u = urllib.urlopen('http://kb.miao-shi.net/display/ITKB/2012/08')
 soup = BeautifulSoup(u.read())
 keylist = (("a","confluence-userlink"),("a","blogHeading"),("a","label"))
 wikilist = []
@@ -29,7 +29,7 @@ if len(wikilist[0]) == len(wikilist[1]) and len(wikilist[0]) == len(wikilist[2])
     a = zip(wikilist[0],wikilist[1],wikilist[2])
 #    for b in a:
 #        print b[0].encode('utf-8'),b[1].encode('utf-8'),b[2].encode('utf-8')
-    conn = sqlite3.connect("/home/rain/下载/behavior1207.sqlite")
+    conn = sqlite3.connect("/home/rain/下载/behavior1208.sqlite")
     cur = conn.cursor()
     cur.execute("create table 'wiki' ('user' VARCHAR,'title' VARCHAR, 'label' VARCHAR)")
     cur.executemany("insert into 'wiki' values (?,?,?)",a)

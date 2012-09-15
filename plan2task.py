@@ -87,7 +87,7 @@ def writeweeklyreport(tasklist):
     """
         保存XLS文件
     """
-    filename = '【TG-IT(1208-3】个人周工作报告(' + task[2].encode('utf-8') + ').xls'
+    filename = '【TG-IT(1208-5)】个人周工作报告(' + task[2].encode('utf-8') + ').xls'
     book.save(os.path.join(weekreportdir,filename))
 
 def writetractable(tasklist):
@@ -136,7 +136,7 @@ def writetractable(tasklist):
     """
         保存XLS文件
     """
-    filename = '【TG-IT(1208-3)】任务执行跟踪表(' + task[4].encode('utf-8') + ').xls'
+    filename = '【TG-IT(1208-5)】任务执行跟踪表(' + task[4].encode('utf-8') + ').xls'
     book.save(os.path.join(tracdir,filename))
 
 
